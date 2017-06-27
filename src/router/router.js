@@ -22,7 +22,7 @@ Vue.use(Router)
 export default new Router({
     base:'/system/',
     routes:[
-        { path:'/',redirect:'/login' },
+        { path:'/',redirect:'/login2' },
         { path:'/login',name:'login',component:login },
         { path:'/login2',name:'login2',component:login2 },
         { path:'/login3',name:'login3',component:login3 },

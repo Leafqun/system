@@ -3,8 +3,8 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <ul class="menu">
-                    <li class="active"><router-link to="/login">Style 1</router-link></li>
-                    <li><router-link to="/login2">Style 2</router-link></li>
+                    <li><router-link to="/login">Style 1</router-link></li>
+                    <li class="active"><router-link to="/login2">Style 2</router-link></li>
                     <li><router-link to="/login3">Style 3</router-link></li>
                 </ul>
             </div>
@@ -18,11 +18,11 @@
                     <h2>登录</h2>
                     <div class="form-group">
                         <label for="username" class="sr-only">Username</label>
-                        <input type="text" class="form-control" id="username" placeholder="Username" autocomplete="off">
+                        <input type="text" class="form-control" id="username" placeholder="Username" autocomplete="off" v-model="username">
                     </div>
                     <div class="form-group">
                         <label for="password" class="sr-only">Password</label>
-                        <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
+                        <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off" v-model="password">
                     </div>
                     <div class="form-group">
                         <label for="remember"><input type="checkbox" id="remember"> Remember Me</label>
@@ -32,7 +32,7 @@
                     </div>
                     <div class="form-group">
                         <input type="submit" value="Sign In" class="btn btn-primary">
-                        <span>用户名不存在</span>
+                        <span>{{msg}}</span>
                     </div>
                 </form>
                 <!-- END Sign In Form -->
@@ -40,29 +40,50 @@
             </div>
         </div>
         <div class="row" style="padding-top: 60px; clear: both;">
-            <div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small></p></div>
+            <div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved.  <a href="" target="_blank" title="模板之家">2017-6-19</a> - made by <a href="" title="网页模板" target="_blank">Leafqun</a></small></p></div>
         </div>
     </div>
 </template>
 
 <script>
     import './css/animate.css'
+    import './css/style.css'
+    import './js/jquery.placeholder.min'
+    import './js/jquery.waypoints.min'
+    import './js/main'
     export default {
         data(){
             return {
-                a: 'a'
+                username:null,
+                password:null,
+                msg:null
+            }
+        },
+        methods:{
+            login: function () {
+                if(this.username==null||this.username==''){
+                    this.msg='用户名为空';
+                }else if(this.username.length<3||this.username.length>10){
+                    this.msg='请输入4-9位的用户名';
+                }else{
+                    this.$http.post("http://localhost:3000/login",{userName:this.username,userPwd:this.password},{emulateJSON:true}).then(function (response) {
+                        var data=response.body;
+                        console.log(data.msg);
+                        if(data.msg=='success'){
+                            this.$router.push({name:'map'});
+                        }else{
+                            this.msg=data.msg;
+                        }
+                    },function(error){
+                        console.log(error);
+                    });
+                }
             }
         }
     }
 </script>
 
 <style scoped>
-    /* =======================================================
-    *
-    * 	Template Style
-    *	Edit this section
-    *
-    * ======================================================= */
     body {
         /*font-family: "Arial","Microsoft YaHei","黑体","宋体",sans-serif;*/
         font:bold 12px/0.75em Arial,'Times New Roman','Microsoft YaHei',SimHei;
@@ -73,165 +94,7 @@
         background-size: cover;
         background-position: -30% center;
         background-repeat: no-repeat;
-        background-image: url('/static/login/images/bg_2.jpg');
+        background-image: url('images/bg_2.jpg');
         height: 100%;
     }
-
-    a {
-        color: #33cccc;
-        -moz-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-    }
-    a:hover {
-        color: #29a3a3;
-    }
-
-    .menu {
-        padding: 0;
-        margin: 30px 0 0 0;
-    }
-    .menu li {
-        list-style: none;
-        margin-bottom: 10px;
-        display: -moz-inline-stack;
-        display: inline-block;
-        zoom: 1;
-        *display: inline;
-    }
-    .menu li a {
-        padding: 5px;
-    }
-    .menu li.active a {
-        color: #b3b3b3;
-    }
-
-    .fh5co-form {
-        padding: 30px;
-        margin-top: 4em;
-        -webkit-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-        -o-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-        box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-        background: #ffffff;
-    }
-    .style-2 .fh5co-form {
-        -webkit-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-        -moz-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-        -o-box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-        box-shadow: -4px 7px 46px 2px rgba(0, 0, 0, 0.1);
-    }
-    @media screen and (max-width: 768px) {
-        .fh5co-form {
-            padding: 15px;
-        }
-    }
-    .fh5co-form h2 {
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-size: 20px;
-        margin: 0 0 30px 0;
-        color: #000000;
-    }
-    .fh5co-form .form-group {
-        margin-bottom: 30px;
-    }
-    .fh5co-form .form-group p {
-        font-size: 14px;
-        color: #9f9f9f;
-        font-weight: 300;
-    }
-    .fh5co-form .form-group p a {
-        color: #000000;
-    }
-    .fh5co-form label {
-        font-weight: 300;
-        font-size: 14px;
-        font-weight: 300;
-    }
-    .fh5co-form .form-control {
-        font-size: 16px;
-        font-weight: 300;
-        height: 50px;
-        padding-left: 0;
-        padding-right: 0;
-        border: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        -o-box-shadow: none;
-        box-shadow: none;
-        -webkit-border-radius: 0px;
-        -moz-border-radius: 0px;
-        -ms-border-radius: 0px;
-        border-radius: 0px;
-        -moz-transition: all 0.3s ease;
-        -o-transition: all 0.3s ease;
-        -webkit-transition: all 0.3s ease;
-        -ms-transition: all 0.3s ease;
-        transition: all 0.3s ease;
-    }
-    .fh5co-form .form-control::-webkit-input-placeholder {
-        color: rgba(0, 0, 0, 0.3);
-        text-transform: uppercase;
-    }
-    .fh5co-form .form-control::-moz-placeholder {
-        color: rgba(0, 0, 0, 0.3);
-        text-transform: uppercase;
-    }
-    .fh5co-form .form-control:-ms-input-placeholder {
-        color: rgba(0, 0, 0, 0.3);
-        text-transform: uppercase;
-    }
-    .copyrights{
-        text-indent:-9999px;
-        height:0;
-        line-height:0;
-        font-size:0;
-        overflow:hidden;
-    }
-    .fh5co-form .form-control:-moz-placeholder {
-        color: rgba(0, 0, 0, 0.3);
-        text-transform: uppercase;
-    }
-    .fh5co-form .form-control:focus, .fh5co-form .form-control:active {
-        border-bottom: 1px solid rgba(0, 0, 0, 0.4);
-    }
-
-    .btn-primary {
-        height: 50px;
-        padding-right: 20px;
-        padding-left: 20px;
-        border: none;
-        background: #33cccc;
-        color: #ffffff;
-        -webkit-box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
-        -moz-box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
-        -o-box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
-        box-shadow: -2px 10px 20px -1px rgba(51, 204, 204, 0.4);
-    }
-    .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-        color: #ffffff;
-        background: #47d1d1 !important;
-        outline: none;
-    }
-
-    input, textarea {
-        color: #000;
-    }
-
-    .placeholder {
-        color: #aaa;
-    }
-
-    .js .animate-box {
-        opacity: 0;
-    }
-
-    /*# sourceMappingURL=style.css.map */
-.cd{
-    background-image: url('/static/login/images/bg_2.jpg');
-}
 </style>

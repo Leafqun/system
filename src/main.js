@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import Resource from 'vue-resource'
 import AMap from 'vue-amap';
-import { lazyAMapApiLoaderInstance } from 'vue-amap';
 import App from './App.vue'
 import router from './router/router'
 import ElementUI from 'element-ui'
@@ -11,7 +10,6 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import 'bootstrap-select/dist/css/bootstrap-select.css'
 import 'bootstrap-select/dist/js/bootstrap-select.js'
-//import 'bootstrap-notify/bootstrap-notify.js'
 import VideoPlayer from 'vue-video-player'
 import './assets/css/animate.min.css'
 import './assets/css/paper-dashboard.css'
@@ -19,7 +17,6 @@ import './assets/css/demo.css'
 import './assets/css/themify-icons.css'
 import './assets/js/chartist.min.js'
 import './assets/js/bootstrap-notify.js'
-//import './assets/js/paper-dashboard.js'
 import './assets/js/demo.js'
 
 
