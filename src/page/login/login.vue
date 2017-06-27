@@ -1,9 +1,18 @@
 <template>
     <div class="container">
-        <div class="row uu">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="menu">
+                    <li class="active"><router-link to="/login">Style 1</router-link></li>
+                    <li><router-link to="/login2">Style 2</router-link></li>
+                    <li><router-link to="/login3">Style 3</router-link></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-md-4 col-md-offset-4">
                 <!-- Start Sign In Form -->
-                <form action="#" class="fh5co-form animate-box" data-animate-effect="fadeIn">
+                <form action="javascript:void(0)" class="fh5co-form animate-box" data-animate-effect="fadeIn">
                     <h2>登录</h2>
                     <div class="form-group">
                         <label for="username" class="sr-only">Username</label>
@@ -37,6 +46,8 @@
 </template>
 
 <script>
+    import './css/style.css'
+    import './css/animate.css'
     require('./images/bg_2.jpg')
     export default {
         data(){
@@ -71,7 +82,5 @@
 </script>
 
 <style scoped>
-.uu{
-    margin-top:50px;
-}
+
 </style>

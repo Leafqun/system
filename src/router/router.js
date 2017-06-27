@@ -14,6 +14,8 @@ import p2 from '../page/temp/video/player/2.vue'
 import p3 from '../page/temp/video/player/3.vue'
 import p4 from '../page/temp/video/player/4.vue'
 import p5 from '../page/temp/video/player/5.vue'
+import login2 from '../page/login/login2.vue'
+import login3 from '../page/login/login3.vue'
 
 Vue.use(Router)
 
@@ -22,6 +24,8 @@ export default new Router({
     routes:[
         { path:'/',redirect:'/login' },
         { path:'/login',name:'login',component:login },
+        { path:'/login2',name:'login2',component:login2 },
+        { path:'/login3',name:'login3',component:login3 },
         { path:'/pick',component:pick},
         { path:'/player',component:player,
             children:[

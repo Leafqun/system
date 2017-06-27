@@ -24,11 +24,6 @@ import './assets/js/chartist.min.js'
 import './assets/js/bootstrap-notify.js'
 //import './assets/js/paper-dashboard.js'
 import './assets/js/demo.js'
-import './page/login/css/animate.css'
-import './page/login/css/style.css'
-import './page/login/js/main.js'
-import './page/login/js/jquery.placeholder.min'
-import './page/login/js/jquery.waypoints.min'
 import 'videojs-hotkeys'
 
 Vue.use(ElementUI)

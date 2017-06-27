@@ -1,0 +1,62 @@
+<template>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="menu">
+                    <li class="active"><router-link to="/login">Style 1</router-link></li>
+                    <li><router-link to="/login2">Style 2</router-link></li>
+                    <li><router-link to="/login3">Style 3</router-link></li>
+                </ul>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+
+
+                <!-- Start Sign In Form -->
+                <form action="" class="fh5co-form animate-box" data-animate-effect="fadeInLeft">
+                    <h2>登录</h2>
+                    <div class="form-group">
+                        <label for="username" class="sr-only">Username</label>
+                        <input type="text" class="form-control" id="username" placeholder="Username" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="password" class="sr-only">Password</label>
+                        <input type="password" class="form-control" id="password" placeholder="Password" autocomplete="off">
+                    </div>
+                    <div class="form-group">
+                        <label for="remember"><input type="checkbox" id="remember"> Remember Me</label>
+                    </div>
+                    <div class="form-group">
+                        <p>Not registered? <a href="sign-up2.html">Sign Up</a> | <a href="forgot2.html">Forgot Password?</a></p>
+                    </div>
+                    <div class="form-group">
+                        <input type="submit" value="Sign In" class="btn btn-primary">
+                        <span>用户名不存在</span>
+                    </div>
+                </form>
+                <!-- END Sign In Form -->
+
+            </div>
+        </div>
+        <div class="row" style="padding-top: 60px; clear: both;">
+            <div class="col-md-12 text-center"><p><small>&copy; All Rights Reserved. More Templates <a href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></small></p></div>
+        </div>
+    </div>
+</template>
+
+<script>
+    import './css/style.css'
+    import './css/animate.css'
+    export default {
+        data(){
+            return {
+                a: 'a'
+            }
+        }
+    }
+</script>
+
+<style scoped>
+
+</style>
