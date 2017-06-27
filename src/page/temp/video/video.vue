@@ -55,7 +55,7 @@
                 <div class="card">
                         <div class="header">
                             <h4 class="title">播放录像</h4>
-                            <p class="category">24 Hours performance</p>
+                            <p class="category">24 Hours</p>
                         </div>
                         <div class="content">
                             <div id="player1">
