@@ -6,8 +6,8 @@
             </div>
             <div class="map">
                 <el-amap vid="amapDemo" :zoom="zoom" :center="center" class="amap-demo" :events="events">
-                    <el-amap-marker v-for="marker in markers" :position="marker.position" :events="marker.events" :visible="marker.visible" :draggable="marker.draggable"></el-amap-marker>
-                    <el-amap-info-window v-for="window in windows" :position="window.position" :visible="window.visible" :content="window.content"></el-amap-info-window>
+                    <el-amap-marker v-for="marker in markers" :key="marker.position" :position="marker.position" :events="marker.events" :visible="marker.visible" :draggable="marker.draggable"></el-amap-marker>
+                    <el-amap-info-window v-for="window in windows" :key="window.position" :position="window.position" :visible="window.visible" :content="window.content"></el-amap-info-window>
                 </el-amap>
             </div>
             <div class="a">
