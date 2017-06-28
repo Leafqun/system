@@ -31,7 +31,7 @@
                         <p>Not registered? <a href="sign-up3.html">Sign Up</a> | <a href="forgot3.html">Forgot Password?</a></p>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Sign In" class="btn btn-primary">
+                        <button class="btn btn-primary" @click="login">登   录</button>
                         <span>{{msg}}</span>
                     </div>
                 </form>

@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="4dd33750-7589-4e5f-ab17-3969108b72e1" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/login/login.vue" afterPath="$PROJECT_DIR$/src/page/login/login.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/login/login2.vue" afterPath="$PROJECT_DIR$/src/page/login/login2.vue" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/page/login/login3.vue" afterPath="$PROJECT_DIR$/src/page/login/login3.vue" />
     </list>
@@ -31,11 +29,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login3.vue" pinned="false" current-in-tab="false">
+      <file leaf-file-name="login3.vue" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page/login/login3.vue">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="195">
-              <caret line="69" column="91" lean-forward="false" selection-start-line="69" selection-start-column="91" selection-end-line="69" selection-end-column="91" />
+              <caret line="33" column="85" lean-forward="false" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="e#2310#2336#0" expanded="true" />
@@ -47,21 +45,21 @@
       <file leaf-file-name="login2.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/login/login2.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="68" column="91" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="91" />
+            <state relative-caret-position="345">
+              <caret line="33" column="85" lean-forward="false" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-                <element signature="e#2292#2318#0" expanded="true" />
+                <element signature="e#2310#2336#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="login.vue" pinned="false" current-in-tab="true">
+      <file leaf-file-name="login.vue" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/page/login/login.vue">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="191">
-              <caret line="68" column="91" lean-forward="false" selection-start-line="68" selection-start-column="91" selection-end-line="68" selection-end-column="91" />
+            <state relative-caret-position="161">
+              <caret line="31" column="85" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="85" />
               <folding>
                 <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
                 <element signature="e#2278#2304#0" expanded="true" />
@@ -122,10 +120,10 @@
         <option value="$PROJECT_DIR$/src/main.js" />
         <option value="$PROJECT_DIR$/src/router/router.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/src/page/login/login2.vue" />
         <option value="$PROJECT_DIR$/src/page/login/login.vue" />
-        <option value="$PROJECT_DIR$/src/page/login/login3.vue" />
         <option value="$PROJECT_DIR$/build/webpack.prod.conf.js" />
+        <option value="$PROJECT_DIR$/src/page/login/login2.vue" />
+        <option value="$PROJECT_DIR$/src/page/login/login3.vue" />
       </list>
     </option>
   </component>
@@ -354,7 +352,7 @@
       <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
-        <script value="build" />
+        <script value="dev" />
       </scripts>
       <node-interpreter value="project" />
       <envs />
@@ -396,7 +394,7 @@
       <workItem from="1498544604964" duration="21000" />
       <workItem from="1498572196498" duration="289000" />
       <workItem from="1498580009348" duration="6574000" />
-      <workItem from="1498622435149" duration="522000" />
+      <workItem from="1498622435149" duration="899000" />
     </task>
     <task id="LOCAL-00001" summary="2">
       <created>1498536617258</created>
@@ -433,11 +431,18 @@
       <option name="project" value="LOCAL" />
       <updated>1498584748065</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="5">
+      <created>1498622967605</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1498622967605</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135546000" />
+    <option name="totallyTimeSpent" value="135923000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="300" y="49" width="1400" height="990" extended-state="0" />
@@ -472,7 +477,8 @@
     <MESSAGE value="2" />
     <MESSAGE value="3" />
     <MESSAGE value="4" />
-    <option name="LAST_COMMIT_MESSAGE" value="4" />
+    <MESSAGE value="5" />
+    <option name="LAST_COMMIT_MESSAGE" value="5" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -786,10 +792,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/login/login3.vue">
+    <entry file="file://$PROJECT_DIR$/src/page/login/login.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="69" column="91" lean-forward="false" selection-start-line="69" selection-start-column="91" selection-end-line="69" selection-end-column="91" />
+        <state relative-caret-position="161">
+          <caret line="31" column="85" lean-forward="false" selection-start-line="31" selection-start-column="24" selection-end-line="31" selection-end-column="85" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
+            <element signature="e#2278#2304#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page/login/login2.vue">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="33" column="85" lean-forward="false" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
             <element signature="e#2310#2336#0" expanded="true" />
@@ -797,24 +814,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/login/login2.vue">
+    <entry file="file://$PROJECT_DIR$/src/page/login/login3.vue">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="68" column="91" lean-forward="false" selection-start-line="68" selection-start-column="37" selection-end-line="68" selection-end-column="91" />
+        <state relative-caret-position="195">
+          <caret line="33" column="85" lean-forward="false" selection-start-line="33" selection-start-column="85" selection-end-line="33" selection-end-column="85" />
           <folding>
             <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#2292#2318#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page/login/login.vue">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="68" column="91" lean-forward="false" selection-start-line="68" selection-start-column="91" selection-end-line="68" selection-end-column="91" />
-          <folding>
-            <element signature="n#style#0;n#div#2;n#div#0;n#template#0;n#!!top" expanded="true" />
-            <element signature="e#2278#2304#0" expanded="true" />
+            <element signature="e#2310#2336#0" expanded="true" />
           </folding>
         </state>
       </provider>

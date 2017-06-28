@@ -14,7 +14,7 @@
 
 
                 <!-- Start Sign In Form -->
-                <form action="" class="fh5co-form animate-box" data-animate-effect="fadeInLeft">
+                <form action="javascript:void(0)" class="fh5co-form animate-box" data-animate-effect="fadeInLeft">
                     <h2>登录</h2>
                     <div class="form-group">
                         <label for="username" class="sr-only">Username</label>
@@ -31,7 +31,7 @@
                         <p>Not registered? <a href="sign-up2.html">Sign Up</a> | <a href="forgot2.html">Forgot Password?</a></p>
                     </div>
                     <div class="form-group">
-                        <input type="submit" value="Sign In" class="btn btn-primary">
+                        <button class="btn btn-primary" @click="login">登   录</button>
                         <span>{{msg}}</span>
                     </div>
                 </form>
