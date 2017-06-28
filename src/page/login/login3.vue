@@ -67,7 +67,7 @@
                 }else if(this.username.length<3||this.username.length>10){
                     this.msg='请输入4-9位的用户名';
                 }else{
-                    this.$http.post("http://localhost:3000/login",{userName:this.username,userPwd:this.password},{emulateJSON:true}).then(function (response) {
+                    this.$http.post("http://119.23.22.99:8080/Student_Website/loginCheck.do",{userName:this.username,userPwd:this.password},{emulateJSON:true}).then(function (response) {
                         var data=response.body;
                         console.log(data.msg);
                         if(data.msg=='success'){
