@@ -50,6 +50,7 @@
     import './css/animate.css'
     import './css/style.css'
     import './js/jquery.placeholder.min'
+    import './js/jquery.waypoints.min'
     import './js/main'
     export default {
         data(){
