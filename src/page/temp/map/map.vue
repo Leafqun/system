@@ -13,7 +13,6 @@
             <div class="a">
             <div class="row">
                 <div class="col-md-12">
-                    <div class="card">
                         <div class="header">
                             <h4 class="title">中心坐标:{{center|remove_brackets}}</h4>
                             <p class="category">成员数：{{memberNum}}，摄像头数：{{cameraNum}}</p>
@@ -40,7 +39,6 @@
                                 </tbody>
                             </table>
                         </div>
-                    </div>
                 </div>
                 </div>
             </div>

@@ -1,81 +1,82 @@
 <template>
     <div class="container-fluid">
-                <div class="card">
-                    <div class="header">
-                        <span class="title" style="font-size: 30px">选择地点:</span>
-                        <select v-model="selectedProvince" class="selectpicker" id="st1">
-                            <option v-for="(province,index) in provinces"
-                                    v-if="province.level==1" :value="province" :key="province.code">
-                                {{province.name}}
-                            </option>
-                        </select>
-                        <select v-model="selectedCity" class="selectpicker" id="st2">
-                            <option v-for="(city,index) in cities" :value="city" :key="city.code">
-                                {{city.name}}
-                            </option>
-                        </select>
-                        <select v-model="selectedBlock" class="selectpicker" id="st3">
-                            <option v-for="(block,index) in blocks" :value="block" :key="block.code">
-                                {{block.name}}
-                            </option>
-                        </select>
-                        <button class="btn btn-info btn-fill btn-wd">确 定</button>
-                        <p class="category">24 Hours performance</p>
-                    </div>
-                    <div class="content">
-                        <ul class="list-unstyled team-members">
-                            <li v-for="(video,index) in videos" :key="video.vid">
-                                <div class="row">
-                                    <div class="col-xs-3">
-                                            {{index+1}}
-                                    </div>
-                                    <div class="col-xs-6">
-                                        {{video.videoName}}
-                                        <br />
-                                        <span class="text-muted"><small>{{video.videoTime}}</small></span>
-                                    </div>
-                                    <div class="col-xs-3 text-right">
-                                        <button class="btn btn-sm btn-success btn-icon" @click="playVideo(video.videoName)"><img :src="play"/></button>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                        <div class="block page">
-                        <el-pagination
-                                @size-change="handleSizeChange"
-                                @current-change="handleCurrentChange"
-                                :current-page.sync="currentPage"
-                                :page-size="10"
-                                layout="total,prev, pager, next, jumper"
-                                :total="20">
-                        </el-pagination>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                        <div class="header">
-                            <h4 class="title">播放录像</h4>
-                            <p class="category">24 Hours</p>
-                        </div>
-                        <div class="content">
-                            <div id="player1">
-                                <video-player  ref="videoPlayer"
-                                               :options="playerOptions"
-                                               @play="onPlayerPlay($event)"
-                                               @pause="onPlayerPause($event)"
-                                               @ended="onPlayerEnded($event)"
-                                               @loadeddata="onPlayerLoadeddata($event)"
-                                               @waiting="onPlayerWaiting($event)"
-                                               @playing="onPlayerPlaying($event)"
-                                               @timeupdate="onPlayerTimeupdate($event)"
-                                               @canplay="onPlayerCanplay($event)"
-                                               @canplaythrough="onPlayerCanplaythrough($event)"
-                                               @ready="playerReadied"
-                                               @statechanged="playerStateChanged($event)">
-                                </video-player>
+        <div class="card">
+            <div class="header">
+                <span class="title" style="font-size: 30px">选择地点:</span>
+                <select v-model="selectedProvince" class="selectpicker" id="st1">
+                    <option v-for="(province,index) in provinces"
+                            v-if="province.level==1" :value="province" :key="province.code">
+                        {{province.name}}
+                    </option>
+                </select>
+                <select v-model="selectedCity" class="selectpicker" id="st2">
+                    <option v-for="(city,index) in cities" :value="city" :key="city.code">
+                        {{city.name}}
+                    </option>
+                </select>
+                <select v-model="selectedBlock" class="selectpicker" id="st3">
+                    <option v-for="(block,index) in blocks" :value="block" :key="block.code">
+                        {{block.name}}
+                    </option>
+                </select>
+                <button class="btn btn-info btn-fill btn-wd">确 定</button>
+                <p class="category">24 Hours performance</p>
+            </div>
+            <div class="content">
+                <ul class="list-unstyled team-members">
+                    <li v-for="(video,index) in videos" :key="video.vid">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                {{index+1}}
+                            </div>
+                            <div class="col-xs-6">
+                                {{video.videoName}}
+                                <br/>
+                                <span class="text-muted"><small>{{video.videoTime}}</small></span>
+                            </div>
+                            <div class="col-xs-3 text-right">
+                                <button class="btn btn-sm btn-success btn-icon" @click="playVideo(video.videoName)"><img
+                                        :src="play"/></button>
                             </div>
                         </div>
+                    </li>
+                </ul>
+                <div class="block page">
+                    <el-pagination
+                            @size-change="handleSizeChange"
+                            @current-change="handleCurrentChange"
+                            :current-page.sync="currentPage"
+                            :page-size="10"
+                            layout="total,prev, pager, next, jumper"
+                            :total="20">
+                    </el-pagination>
                 </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="header">
+                <h4 class="title">播放录像</h4>
+                <p class="category">24 Hours</p>
+            </div>
+            <div class="content">
+                <div id="player1">
+                    <video-player ref="videoPlayer"
+                                  :options="playerOptions"
+                                  @play="onPlayerPlay($event)"
+                                  @pause="onPlayerPause($event)"
+                                  @ended="onPlayerEnded($event)"
+                                  @loadeddata="onPlayerLoadeddata($event)"
+                                  @waiting="onPlayerWaiting($event)"
+                                  @playing="onPlayerPlaying($event)"
+                                  @timeupdate="onPlayerTimeupdate($event)"
+                                  @canplay="onPlayerCanplay($event)"
+                                  @canplaythrough="onPlayerCanplaythrough($event)"
+                                  @ready="playerReadied"
+                                  @statechanged="playerStateChanged($event)">
+                    </video-player>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
